@@ -147,7 +147,18 @@ namespace RTKBOXtool.View
                         double[] a = Controller.Global.Ecef2Pos18(IN18);
                         double[] b = Controller.Global.ENUspeed(IN18);
                         string[] A = Controller.Global.BSsetdGV(a);
-
+                        string[] B = Controller.Global.IN18toSTR(IN18);
+                        BeginInvoke((EventHandler)(delegate
+                        {
+                            dGVStation.Rows[2].Cells[1].Value = B[0];
+                            dGVStation.Rows[3].Cells[1].Value = A[0];
+                            dGVStation.Rows[4].Cells[1].Value = A[1];
+                            dGVStation.Rows[5].Cells[1].Value = a[2];
+                            dGVStation.Rows[6].Cells[1].Value = IN18.speed0fRecefY;
+                            dGVStation.Rows[7].Cells[1].Value = IN18.SpeeedofRecefX;
+                            dGVStation.Rows[8].Cells[1].Value = IN18.SpeeedofRecefZ;
+                            dGVStation.Rows[9].Cells[1].Value = B[1];
+                        }));
                     }
                 }
             }

@@ -338,7 +338,30 @@ namespace RTKBOXtool.Controller
         }
         public static string[] IN18toSTR(Model.INF_B562_0118 IN18)
         {
-
+            string[] a = new string[2];
+            switch (IN18.stat)
+            {
+                case 0:
+                    a[0] = "NO solution";
+                    break;
+                case 1:
+                    a[0] = "FIX";
+                    break;
+                case 2:
+                    a[0] = "Float";
+                    break;
+                case 3:
+                    a[0] = "SBAS";
+                    break;
+                case 4:
+                    a[0] = "DGPS/DGNSS";
+                    break;
+                case 5:
+                    a[0] = "SINGLE";
+                    break;
+            }
+            a[1] = IN18.Rsetn.ToString();
+            return a;
         }
         /// <summary>
         /// 设置信息19协议数据转文本信息
