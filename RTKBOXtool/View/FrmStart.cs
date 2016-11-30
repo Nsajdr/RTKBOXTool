@@ -145,7 +145,9 @@ namespace RTKBOXtool.View
                     else {
                         Controller.Global.ParseDataIN18(Data, IN18);
                         double[] a = Controller.Global.Ecef2Pos18(IN18);
-                        double[] b=
+                        double[] b = Controller.Global.ENUspeed(IN18);
+                        string[] A = Controller.Global.BSsetdGV(a);
+
                     }
                 }
             }

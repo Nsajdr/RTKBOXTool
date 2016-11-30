@@ -210,6 +210,11 @@ namespace RTKBOXtool.Controller
                 }
             }
         }
+        /// <summary>
+        /// IN18流动站数据解析
+        /// </summary>
+        /// <param name="Data"></param>
+        /// <param name="IN18"></param>
         public static void ParseDataIN18(byte[] Data, Model.INF_B562_0118 IN18)
         {
             for (int i = 0; i < Data.Length - 6; i++)
@@ -233,6 +238,11 @@ namespace RTKBOXtool.Controller
                 }
             }
         }
+        /// <summary>
+        /// 基准站坐标ECEF转经纬度
+        /// </summary>
+        /// <param name="IN01"></param>
+        /// <returns></returns>
         public static double[] Ecef2Pos01(Model.INF_B562_0101 IN01)
         {
             double[] r = { IN01.ecefX * 0.01, IN01.ecefY * 0.01, IN01.ecefZ * 0.01 };
@@ -240,6 +250,11 @@ namespace RTKBOXtool.Controller
             CoordinateConverter.ecef2pos(r, pos);
             return pos;
         }
+        /// <summary>
+        /// 用户设置基准站坐标ECEF转经纬度
+        /// </summary>
+        /// <param name="IN11"></param>
+        /// <returns></returns>
         public static double[] Ecef2Pos11(Model.INF_B562_0111 IN11)
         {
             double[] r = { IN11.SetX,IN11.SetY,IN11.SetZ };
@@ -247,12 +262,22 @@ namespace RTKBOXtool.Controller
             CoordinateConverter.ecef2pos(r, pos);
             return pos;
         }
+        /// <summary>
+        /// 流动站坐标ECEF转经纬度
+        /// </summary>
+        /// <param name="IN18"></param>
+        /// <returns></returns>
         public static double[] Ecef2Pos18(Model.INF_B562_0118 IN18)
         {
-            double[] r = { IN18.EcefX, IN18.EcefY, IN18.EcefZ };
+            double[] r = { IN18.Recefx, IN18.RecefY, IN18.Recefz };
             double[] pos = new double[3];
             CoordinateConverter.ecef2pos(r, pos);
             return pos;
+        }
+        public static double[] ENUspeed(Model.INF_B562_0118 IN18)
+        {
+            double[] m = new double[3];
+            return m;
         }
         /// <summary>
         /// B5620111数据解析
@@ -285,6 +310,11 @@ namespace RTKBOXtool.Controller
                 }
             }
         }
+        /// <summary>
+        /// 经纬度由弧度转角度
+        /// </summary>
+        /// <param name="de"></param>
+        /// <returns></returns>
         public static string[] BSsetdGV(double[] de)
         {
             string[] a = new string[2];
@@ -305,6 +335,10 @@ namespace RTKBOXtool.Controller
                 a[1] = "E " + (Math.Abs(de[1]) / Math.PI * 180.0).ToString("f9") + "°";
             }
             return a;
+        }
+        public static string[] IN18toSTR(Model.INF_B562_0118 IN18)
+        {
+
         }
         /// <summary>
         /// 设置信息19协议数据转文本信息
