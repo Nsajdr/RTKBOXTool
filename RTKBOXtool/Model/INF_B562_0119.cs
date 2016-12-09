@@ -5,7 +5,7 @@
     /// </summary>
     public class INF_B562_0119
     {
-        private byte _stationtype;
+        private byte _stationtype = 3;
         private byte _outputtype;
         private byte _rtkrate;
         private byte _gnsstype;

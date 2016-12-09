@@ -47,9 +47,8 @@ namespace RTKBOXtool.Controller
         /// </summary>
         /// <param name="payload">解析数组</param>
         /// <returns></returns>
-        public static INF_B562_0101 BaseStation(byte[] payload)
+        public static INF_B562_0101 BaseStation(byte[] payload, INF_B562_0101 m)
         {
-            INF_B562_0101 m = new INF_B562_0101();
             m.iTOW = BitConverter.ToUInt32(payload, 0);
             m.ecefX = BitConverter.ToInt32(payload, 4);
             m.ecefY = BitConverter.ToInt32(payload, 8);
@@ -62,9 +61,8 @@ namespace RTKBOXtool.Controller
         /// </summary>
         /// <param name="payload">解析数组</param>
         /// <returns></returns>
-        public static INF_B562_0111 UserBaseStation(byte[] payload)
+        public static INF_B562_0111 UserBaseStation(byte[] payload, INF_B562_0111 m)
         {
-            INF_B562_0111 m = new INF_B562_0111();
             m.SetX = BitConverter.ToDouble(payload, 0);
             m.SetY = BitConverter.ToDouble(payload, 8);
             m.SetZ = BitConverter.ToDouble(payload, 16);
@@ -75,9 +73,8 @@ namespace RTKBOXtool.Controller
         /// </summary>
         /// <param name="payload">解析数组</param>
         /// <returns></returns>
-        public static INF_B562_0118 RoverStation(byte[] payload)
+        public static INF_B562_0118 RoverStation(byte[] payload, INF_B562_0118 m)
         {
-            INF_B562_0118 m = new INF_B562_0118();
             m.BiGpsWeek = BitConverter.ToInt16(payload, 0);
             m.BdRoverSencond = BitConverter.ToSingle(payload, 2);
             m.EcefX = BitConverter.ToDouble(payload, 6);
@@ -105,9 +102,8 @@ namespace RTKBOXtool.Controller
         /// </summary>
         /// <param name="payload">解析数组</param>
         /// <returns></returns>
-        public static INF_B562_0119 RTKBoxOptions(byte[] payload)
+        public static INF_B562_0119 RTKBoxOptions(byte[] payload, INF_B562_0119 m)
         {
-            INF_B562_0119 m = new INF_B562_0119();
             m.Stationtype = payload[0];
             m.Outputtype = payload[1];
             m.Rtkrate = payload[2];

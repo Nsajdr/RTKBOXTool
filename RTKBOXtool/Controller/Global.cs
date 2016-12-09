@@ -23,7 +23,7 @@ namespace RTKBOXtool.Controller
         public static void OpenPort(SerialPort sp, string COMname, int BaudRate)
         {
             if (sp.IsOpen)
-            { sp.Close(); }
+            { sp.Close();}
             sp.PortName = COMname;
             sp.BaudRate = BaudRate;
             sp.Open();
@@ -129,7 +129,7 @@ namespace RTKBOXtool.Controller
                         sp.WriteLine("$ICERTK,BAUD,4*FF\r\n");
                         break;
                 }
-                Thread.Sleep(300);
+                //Thread.Sleep(300);
             }
         }
         /// <summary>
@@ -137,17 +137,17 @@ namespace RTKBOXtool.Controller
         /// </summary>
         /// <param name="sp">当前串口</param>
         /// <param name="IN19">19数据实体类</param>
-        public static void ParseDataIN19(SerialPort sp, Model.INF_B562_0119 IN19)
+        public static void ParseDataIN19(byte[] Data, Model.INF_B562_0119 IN19)
         {
-            byte[] Data = new byte[sp.BytesToRead];
-            sp.Read(Data, 0, Data.Length);
-            sp.DiscardInBuffer();
-            string str = null;
-            for (int i = 0; i < Data.Length; i++)
-            {
-                str += Data[i].ToString("X2");
-            }
-            System.Windows.Forms.MessageBox.Show(str);
+            //byte[] Data = new byte[sp.BytesToRead];
+            //sp.Read(Data, 0, Data.Length);
+            //sp.DiscardInBuffer();
+            //string str = null;
+            //for (int i = 0; i < Data.Length; i++)
+            //{
+            //    str += Data[i].ToString("X2");
+            //}
+            //MessageBox.Show(str);
             for (int i = 0; i < Data.Length - 6; i++)
             {
                 if ((Data[i] == 0xB5) && (Data[i + 1] == 0x62))
@@ -161,7 +161,7 @@ namespace RTKBOXtool.Controller
                             if (Protocol_UBX.Checksum(buffer))
                             {
                                 byte[] payload = buffer.Skip(4).Take(len).ToArray();
-                                IN19 = Protocol_UBX.RTKBoxOptions(payload);
+                                IN19 = Protocol_UBX.RTKBoxOptions(payload,IN19);
                                 break;
                             }
                         }
@@ -190,7 +190,7 @@ namespace RTKBOXtool.Controller
                             if (Protocol_UBX.Checksum(buffer))
                             {
                                 byte[] payload = buffer.Skip(4).Take(len).ToArray();
-                                IN01 = Protocol_UBX.BaseStation(payload);
+                                IN01 = Protocol_UBX.BaseStation(payload,IN01);
                             }
                         }
                     }
@@ -203,7 +203,7 @@ namespace RTKBOXtool.Controller
                             if (Protocol_UBX.Checksum(buffer))
                             {
                                 byte[] payload = buffer.Skip(4).Take(len).ToArray();
-                                IN11 = Protocol_UBX.UserBaseStation(payload);
+                                IN11 = Protocol_UBX.UserBaseStation(payload,IN11);
                             }
                         }
                     }
@@ -230,7 +230,7 @@ namespace RTKBOXtool.Controller
                             if (Protocol_UBX.Checksum(buffer))
                             {
                                 byte[] payload = buffer.Skip(4).Take(len).ToArray();
-                                IN18 = Protocol_UBX.RoverStation(payload);
+                                IN18 = Protocol_UBX.RoverStation(payload,IN18);
                                 break;
                             }
                         }
@@ -276,7 +276,10 @@ namespace RTKBOXtool.Controller
         }
         public static double[] ENUspeed(Model.INF_B562_0118 IN18)
         {
+            double[] pos = Ecef2Pos18(IN18);
+            double[] n = { IN18.SpeeedofRecefX, IN18.speed0fRecefY, IN18.SpeeedofRecefZ };
             double[] m = new double[3];
+            CoordinateConverter.ecef2enu(pos, n, m);
             return m;
         }
         /// <summary>
@@ -302,7 +305,7 @@ namespace RTKBOXtool.Controller
                             if (Protocol_UBX.Checksum(buffer))
                             {
                                 byte[] payload = buffer.Skip(4).Take(len).ToArray();
-                                IN11 = Protocol_UBX.UserBaseStation(payload);
+                                IN11 = Protocol_UBX.UserBaseStation(payload,IN11);
                                 break;
                             }
                         }
@@ -415,7 +418,7 @@ namespace RTKBOXtool.Controller
             {
                 case 0:Stf.Gnsstype = "GPS";
                     break;
-                case 1:Stf.Gnsstype = "GPS+北斗";
+                case 1:Stf.Gnsstype = "GPS+Beidou";
                     break;
             }
             switch (In19.Rtkmode)
@@ -453,7 +456,24 @@ namespace RTKBOXtool.Controller
             }          
             Stf.NetID = In19.NetID.ToString();
             Stf.channels = In19.channels.ToString();
-
+            switch (In19.RadioBaudrate)
+            {
+                case 0:
+                    Stf.RadioBaudrate = "9600";
+                    break;
+                case 1:
+                    Stf.RadioBaudrate = "19200";
+                    break;
+                case 2:
+                    Stf.RadioBaudrate = "38400";
+                    break;
+                case 3:
+                    Stf.RadioBaudrate = "57600";
+                    break;
+                case 4:
+                    Stf.RadioBaudrate = "115200";
+                    break;
+            }          
         }
     }
 }

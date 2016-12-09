@@ -125,6 +125,9 @@
   <data name="splitContainer1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
+  <data name="groupBox5.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left, Right</value>
+  </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="labNetID.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -136,7 +139,7 @@
     <value>NoControl</value>
   </data>
   <data name="labNetID.Location" type="System.Drawing.Point, System.Drawing">
-    <value>146, 77</value>
+    <value>198, 77</value>
   </data>
   <data name="labNetID.Size" type="System.Drawing.Size, System.Drawing">
     <value>95, 21</value>
@@ -169,7 +172,7 @@
     <value>NoControl</value>
   </data>
   <data name="label21.Location" type="System.Drawing.Point, System.Drawing">
-    <value>61, 113</value>
+    <value>93, 113</value>
   </data>
   <data name="label21.Size" type="System.Drawing.Size, System.Drawing">
     <value>58, 21</value>
@@ -202,7 +205,7 @@
     <value>NoControl</value>
   </data>
   <data name="labchanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>146, 113</value>
+    <value>198, 113</value>
   </data>
   <data name="labchanel.Size" type="System.Drawing.Size, System.Drawing">
     <value>49, 21</value>
@@ -235,7 +238,7 @@
     <value>NoControl</value>
   </data>
   <data name="label19.Location" type="System.Drawing.Point, System.Drawing">
-    <value>48, 77</value>
+    <value>80, 77</value>
   </data>
   <data name="label19.Size" type="System.Drawing.Size, System.Drawing">
     <value>71, 21</value>
@@ -268,7 +271,7 @@
     <value>NoControl</value>
   </data>
   <data name="labTFmode.Location" type="System.Drawing.Point, System.Drawing">
-    <value>146, 45</value>
+    <value>198, 45</value>
   </data>
   <data name="labTFmode.Size" type="System.Drawing.Size, System.Drawing">
     <value>81, 21</value>
@@ -298,7 +301,7 @@
     <value>微软雅黑, 12pt</value>
   </data>
   <data name="label17.Location" type="System.Drawing.Point, System.Drawing">
-    <value>29, 45</value>
+    <value>61, 45</value>
   </data>
   <data name="label17.Size" type="System.Drawing.Size, System.Drawing">
     <value>90, 21</value>
@@ -325,10 +328,10 @@
     <value>幼圆, 12pt, style=Bold</value>
   </data>
   <data name="groupBox5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 438</value>
+    <value>7, 443</value>
   </data>
   <data name="groupBox5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>278, 170</value>
+    <value>339, 170</value>
   </data>
   <data name="groupBox5.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -348,30 +351,6 @@
   <data name="&gt;&gt;groupBox5.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="button3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>378, 12</value>
-  </data>
-  <data name="button3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>90, 29</value>
-  </data>
-  <data name="button3.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="button3.Text" xml:space="preserve">
-    <value>更改设置</value>
-  </data>
-  <data name="&gt;&gt;button3.Name" xml:space="preserve">
-    <value>button3</value>
-  </data>
-  <data name="&gt;&gt;button3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;button3.Parent" xml:space="preserve">
-    <value>splitContainer1.Panel1</value>
-  </data>
-  <data name="&gt;&gt;button3.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
   <data name="groupBox1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
@@ -379,7 +358,7 @@
     <value>True</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 24</value>
+    <value>38, 24</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>56, 16</value>
@@ -406,10 +385,10 @@
     <value>Left, Right</value>
   </data>
   <data name="comboBoxPort.Location" type="System.Drawing.Point, System.Drawing">
-    <value>71, 20</value>
+    <value>100, 21</value>
   </data>
   <data name="comboBoxPort.Size" type="System.Drawing.Size, System.Drawing">
-    <value>115, 24</value>
+    <value>127, 24</value>
   </data>
   <data name="comboBoxPort.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -430,7 +409,7 @@
     <value>Bottom, Right</value>
   </data>
   <data name="btnOpenPort.Location" type="System.Drawing.Point, System.Drawing">
-    <value>192, 50</value>
+    <value>246, 50</value>
   </data>
   <data name="btnOpenPort.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
@@ -457,7 +436,7 @@
     <value>Top, Right</value>
   </data>
   <data name="btnGetPort.Location" type="System.Drawing.Point, System.Drawing">
-    <value>192, 21</value>
+    <value>246, 21</value>
   </data>
   <data name="btnGetPort.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
@@ -493,10 +472,10 @@
     <value>57600</value>
   </data>
   <data name="comboBoxBaudrate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>71, 51</value>
+    <value>100, 49</value>
   </data>
   <data name="comboBoxBaudrate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>115, 24</value>
+    <value>127, 24</value>
   </data>
   <data name="comboBoxBaudrate.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -520,7 +499,7 @@
     <value>True</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 54</value>
+    <value>22, 53</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
     <value>72, 16</value>
@@ -547,7 +526,7 @@
     <value>7, 3</value>
   </data>
   <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>278, 84</value>
+    <value>342, 84</value>
   </data>
   <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -562,7 +541,37 @@
     <value>splitContainer1.Panel1</value>
   </data>
   <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>1</value>
+  </data>
+  <data name="tabControlStation.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="btnBaseCoordinate.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="btnBaseCoordinate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>197, 283</value>
+  </data>
+  <data name="btnBaseCoordinate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>128, 27</value>
+  </data>
+  <data name="btnBaseCoordinate.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="btnBaseCoordinate.Text" xml:space="preserve">
+    <value>更改基准站坐标</value>
+  </data>
+  <data name="&gt;&gt;btnBaseCoordinate.Name" xml:space="preserve">
+    <value>btnBaseCoordinate</value>
+  </data>
+  <data name="&gt;&gt;btnBaseCoordinate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnBaseCoordinate.Parent" xml:space="preserve">
+    <value>tabPageStation</value>
+  </data>
+  <data name="&gt;&gt;btnBaseCoordinate.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <metadata name="ColumnName.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -571,7 +580,7 @@
     <value>    字段列表</value>
   </data>
   <data name="ColumnName.Width" type="System.Int32, mscorlib">
-    <value>132</value>
+    <value>163</value>
   </data>
   <metadata name="ColumnValue.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -580,7 +589,7 @@
     <value>    结果值</value>
   </data>
   <data name="ColumnValue.Width" type="System.Int32, mscorlib">
-    <value>132</value>
+    <value>163</value>
   </data>
   <data name="dGVStation.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -592,7 +601,7 @@
     <value>None</value>
   </data>
   <data name="dGVStation.Size" type="System.Drawing.Size, System.Drawing">
-    <value>264, 310</value>
+    <value>328, 310</value>
   </data>
   <data name="dGVStation.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -607,7 +616,7 @@
     <value>tabPageStation</value>
   </data>
   <data name="&gt;&gt;dGVStation.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="tabPageStation.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 26</value>
@@ -616,7 +625,7 @@
     <value>3, 3, 3, 3</value>
   </data>
   <data name="tabPageStation.Size" type="System.Drawing.Size, System.Drawing">
-    <value>270, 316</value>
+    <value>334, 316</value>
   </data>
   <data name="tabPageStation.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -640,10 +649,10 @@
     <value>新宋体, 12pt</value>
   </data>
   <data name="tabControlStation.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 93</value>
+    <value>8, 96</value>
   </data>
   <data name="tabControlStation.Size" type="System.Drawing.Size, System.Drawing">
-    <value>278, 346</value>
+    <value>342, 346</value>
   </data>
   <data name="tabControlStation.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -658,7 +667,7 @@
     <value>splitContainer1.Panel1</value>
   </data>
   <data name="&gt;&gt;tabControlStation.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>2</value>
   </data>
   <data name="&gt;&gt;splitContainer1.Panel1.Name" xml:space="preserve">
     <value>splitContainer1.Panel1</value>
@@ -672,122 +681,11 @@
   <data name="&gt;&gt;splitContainer1.Panel1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="btnBaseCoordinate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 12</value>
+  <data name="groupBox2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
   </data>
-  <data name="btnBaseCoordinate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>128, 27</value>
-  </data>
-  <data name="btnBaseCoordinate.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="btnBaseCoordinate.Text" xml:space="preserve">
-    <value>更改基准站坐标</value>
-  </data>
-  <data name="&gt;&gt;btnBaseCoordinate.Name" xml:space="preserve">
-    <value>btnBaseCoordinate</value>
-  </data>
-  <data name="&gt;&gt;btnBaseCoordinate.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnBaseCoordinate.Parent" xml:space="preserve">
-    <value>groupBox4</value>
-  </data>
-  <data name="&gt;&gt;btnBaseCoordinate.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="btnSettings.Location" type="System.Drawing.Point, System.Drawing">
-    <value>390, 12</value>
-  </data>
-  <data name="btnSettings.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
-    <value>No</value>
-  </data>
-  <data name="btnSettings.Size" type="System.Drawing.Size, System.Drawing">
-    <value>80, 29</value>
-  </data>
-  <data name="btnSettings.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="btnSettings.Text" xml:space="preserve">
-    <value>更改设置</value>
-  </data>
-  <data name="&gt;&gt;btnSettings.Name" xml:space="preserve">
-    <value>btnSettings</value>
-  </data>
-  <data name="&gt;&gt;btnSettings.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnSettings.Parent" xml:space="preserve">
-    <value>groupBox4</value>
-  </data>
-  <data name="&gt;&gt;btnSettings.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="groupBox4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 138</value>
-  </data>
-  <data name="groupBox4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>472, 42</value>
-  </data>
-  <data name="groupBox4.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;groupBox4.Name" xml:space="preserve">
-    <value>groupBox4</value>
-  </data>
-  <data name="&gt;&gt;groupBox4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBox4.Parent" xml:space="preserve">
-    <value>splitContainer1.Panel2</value>
-  </data>
-  <data name="&gt;&gt;groupBox4.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="pictureBox1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 22</value>
-  </data>
-  <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>469, 401</value>
-  </data>
-  <data name="pictureBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.Name" xml:space="preserve">
-    <value>pictureBox1</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.Parent" xml:space="preserve">
-    <value>groupBox3</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="groupBox3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 186</value>
-  </data>
-  <data name="groupBox3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>475, 426</value>
-  </data>
-  <data name="groupBox3.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;groupBox3.Name" xml:space="preserve">
-    <value>groupBox3</value>
-  </data>
-  <data name="&gt;&gt;groupBox3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBox3.Parent" xml:space="preserve">
-    <value>splitContainer1.Panel2</value>
-  </data>
-  <data name="&gt;&gt;groupBox3.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="labRTKoutBdRate.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom</value>
   </data>
   <data name="labRTKoutBdRate.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -799,7 +697,7 @@
     <value>NoControl</value>
   </data>
   <data name="labRTKoutBdRate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>381, 97</value>
+    <value>338, 97</value>
   </data>
   <data name="labRTKoutBdRate.Size" type="System.Drawing.Size, System.Drawing">
     <value>90, 21</value>
@@ -822,6 +720,9 @@
   <data name="&gt;&gt;labRTKoutBdRate.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="label15.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
   <data name="label15.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -832,7 +733,7 @@
     <value>NoControl</value>
   </data>
   <data name="label15.Location" type="System.Drawing.Point, System.Drawing">
-    <value>240, 97</value>
+    <value>214, 97</value>
   </data>
   <data name="label15.Size" type="System.Drawing.Size, System.Drawing">
     <value>135, 21</value>
@@ -888,6 +789,9 @@
   <data name="&gt;&gt;label14.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="labRTKmode.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
   <data name="labRTKmode.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -898,7 +802,7 @@
     <value>NoControl</value>
   </data>
   <data name="labRTKmode.Location" type="System.Drawing.Point, System.Drawing">
-    <value>131, 97</value>
+    <value>102, 97</value>
   </data>
   <data name="labRTKmode.Size" type="System.Drawing.Size, System.Drawing">
     <value>90, 21</value>
@@ -921,6 +825,9 @@
   <data name="&gt;&gt;labRTKmode.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="labGNSSmode.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
   <data name="labGNSSmode.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -931,7 +838,7 @@
     <value>NoControl</value>
   </data>
   <data name="labGNSSmode.Location" type="System.Drawing.Point, System.Drawing">
-    <value>381, 60</value>
+    <value>338, 63</value>
   </data>
   <data name="labGNSSmode.Size" type="System.Drawing.Size, System.Drawing">
     <value>90, 21</value>
@@ -954,6 +861,9 @@
   <data name="&gt;&gt;labGNSSmode.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
+  <data name="labPosFormat.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
   <data name="labPosFormat.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -964,7 +874,7 @@
     <value>NoControl</value>
   </data>
   <data name="labPosFormat.Location" type="System.Drawing.Point, System.Drawing">
-    <value>131, 60</value>
+    <value>102, 60</value>
   </data>
   <data name="labPosFormat.Size" type="System.Drawing.Size, System.Drawing">
     <value>90, 21</value>
@@ -987,6 +897,9 @@
   <data name="&gt;&gt;labPosFormat.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
+  <data name="labWoringband.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top</value>
+  </data>
   <data name="labWoringband.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -994,7 +907,7 @@
     <value>微软雅黑, 12pt</value>
   </data>
   <data name="labWoringband.Location" type="System.Drawing.Point, System.Drawing">
-    <value>381, 21</value>
+    <value>338, 24</value>
   </data>
   <data name="labWoringband.Size" type="System.Drawing.Size, System.Drawing">
     <value>90, 21</value>
@@ -1024,7 +937,7 @@
     <value>微软雅黑, 12pt</value>
   </data>
   <data name="labProtocol.Location" type="System.Drawing.Point, System.Drawing">
-    <value>131, 21</value>
+    <value>102, 24</value>
   </data>
   <data name="labProtocol.Size" type="System.Drawing.Size, System.Drawing">
     <value>90, 21</value>
@@ -1077,6 +990,9 @@
   <data name="&gt;&gt;label13.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
+  <data name="label11.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
   <data name="label11.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -1084,7 +1000,7 @@
     <value>微软雅黑, 12pt</value>
   </data>
   <data name="label11.Location" type="System.Drawing.Point, System.Drawing">
-    <value>23, 97</value>
+    <value>6, 97</value>
   </data>
   <data name="label11.Size" type="System.Drawing.Size, System.Drawing">
     <value>87, 21</value>
@@ -1107,6 +1023,9 @@
   <data name="&gt;&gt;label11.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
+  <data name="label9.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
   <data name="label9.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -1114,7 +1033,7 @@
     <value>微软雅黑, 12pt</value>
   </data>
   <data name="label9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>274, 60</value>
+    <value>248, 63</value>
   </data>
   <data name="label9.Size" type="System.Drawing.Size, System.Drawing">
     <value>101, 21</value>
@@ -1137,6 +1056,9 @@
   <data name="&gt;&gt;label9.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
+  <data name="label7.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top</value>
+  </data>
   <data name="label7.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -1144,7 +1066,7 @@
     <value>微软雅黑, 12pt</value>
   </data>
   <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>285, 23</value>
+    <value>248, 24</value>
   </data>
   <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
     <value>90, 21</value>
@@ -1167,6 +1089,9 @@
   <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
     <value>11</value>
   </data>
+  <data name="label5.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
   <data name="label5.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -1174,7 +1099,7 @@
     <value>微软雅黑, 12pt</value>
   </data>
   <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>23, 60</value>
+    <value>6, 60</value>
   </data>
   <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
     <value>90, 21</value>
@@ -1204,7 +1129,7 @@
     <value>微软雅黑, 12pt</value>
   </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>23, 24</value>
+    <value>6, 24</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>90, 21</value>
@@ -1231,10 +1156,10 @@
     <value>幼圆, 12pt, style=Bold</value>
   </data>
   <data name="groupBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 3</value>
+    <value>11, 3</value>
   </data>
   <data name="groupBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>472, 132</value>
+    <value>436, 132</value>
   </data>
   <data name="groupBox2.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -1252,6 +1177,108 @@
     <value>splitContainer1.Panel2</value>
   </data>
   <data name="&gt;&gt;groupBox2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="groupBox4.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="btnSettings.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="btnSettings.Location" type="System.Drawing.Point, System.Drawing">
+    <value>350, 13</value>
+  </data>
+  <data name="btnSettings.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>No</value>
+  </data>
+  <data name="btnSettings.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 29</value>
+  </data>
+  <data name="btnSettings.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnSettings.Text" xml:space="preserve">
+    <value>更改设置</value>
+  </data>
+  <data name="&gt;&gt;btnSettings.Name" xml:space="preserve">
+    <value>btnSettings</value>
+  </data>
+  <data name="&gt;&gt;btnSettings.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnSettings.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;btnSettings.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="groupBox4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>11, 138</value>
+  </data>
+  <data name="groupBox4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>436, 45</value>
+  </data>
+  <data name="groupBox4.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;groupBox4.Name" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;groupBox4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox4.Parent" xml:space="preserve">
+    <value>splitContainer1.Panel2</value>
+  </data>
+  <data name="&gt;&gt;groupBox4.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="groupBox3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="pcbCompass.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="pcbCompass.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 13</value>
+  </data>
+  <data name="pcbCompass.Size" type="System.Drawing.Size, System.Drawing">
+    <value>410, 410</value>
+  </data>
+  <data name="pcbCompass.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;pcbCompass.Name" xml:space="preserve">
+    <value>pcbCompass</value>
+  </data>
+  <data name="&gt;&gt;pcbCompass.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pcbCompass.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;pcbCompass.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="groupBox3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>11, 184</value>
+  </data>
+  <data name="groupBox3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>436, 429</value>
+  </data>
+  <data name="groupBox3.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;groupBox3.Name" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;groupBox3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox3.Parent" xml:space="preserve">
+    <value>splitContainer1.Panel2</value>
+  </data>
+  <data name="&gt;&gt;groupBox3.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
   <data name="&gt;&gt;splitContainer1.Panel2.Name" xml:space="preserve">
@@ -1267,10 +1294,10 @@
     <value>1</value>
   </data>
   <data name="splitContainer1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>776, 615</value>
+    <value>815, 620</value>
   </data>
   <data name="splitContainer1.SplitterDistance" type="System.Int32, mscorlib">
-    <value>288</value>
+    <value>352</value>
   </data>
   <data name="splitContainer1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1294,7 +1321,7 @@
     <value>8, 16</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>776, 615</value>
+    <value>815, 620</value>
   </data>
   <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
     <value>宋体, 12pt</value>

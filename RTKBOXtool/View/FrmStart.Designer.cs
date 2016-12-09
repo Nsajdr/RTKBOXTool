@@ -39,7 +39,6 @@
             this.label19 = new System.Windows.Forms.Label();
             this.labTFmode = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.comboBoxPort = new System.Windows.Forms.ComboBox();
@@ -49,14 +48,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tabControlStation = new System.Windows.Forms.TabControl();
             this.tabPageStation = new System.Windows.Forms.TabPage();
+            this.btnBaseCoordinate = new System.Windows.Forms.Button();
             this.dGVStation = new System.Windows.Forms.DataGridView();
             this.ColumnName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.btnBaseCoordinate = new System.Windows.Forms.Button();
-            this.btnSettings = new System.Windows.Forms.Button();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.labRTKoutBdRate = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -72,6 +67,10 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.btnSettings = new System.Windows.Forms.Button();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.pcbCompass = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -81,10 +80,10 @@
             this.tabControlStation.SuspendLayout();
             this.tabPageStation.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGVStation)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbCompass)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -95,25 +94,24 @@
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.Controls.Add(this.groupBox5);
-            this.splitContainer1.Panel1.Controls.Add(this.button3);
             this.splitContainer1.Panel1.Controls.Add(this.groupBox1);
             this.splitContainer1.Panel1.Controls.Add(this.tabControlStation);
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.groupBox2);
             this.splitContainer1.Panel2.Controls.Add(this.groupBox4);
             this.splitContainer1.Panel2.Controls.Add(this.groupBox3);
-            this.splitContainer1.Panel2.Controls.Add(this.groupBox2);
             // 
             // groupBox5
             // 
+            resources.ApplyResources(this.groupBox5, "groupBox5");
             this.groupBox5.Controls.Add(this.labNetID);
             this.groupBox5.Controls.Add(this.label21);
             this.groupBox5.Controls.Add(this.labchanel);
             this.groupBox5.Controls.Add(this.label19);
             this.groupBox5.Controls.Add(this.labTFmode);
             this.groupBox5.Controls.Add(this.label17);
-            resources.ApplyResources(this.groupBox5, "groupBox5");
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.TabStop = false;
             // 
@@ -146,12 +144,6 @@
             // 
             resources.ApplyResources(this.label17, "label17");
             this.label17.Name = "label17";
-            // 
-            // button3
-            // 
-            resources.ApplyResources(this.button3, "button3");
-            this.button3.Name = "button3";
-            this.button3.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
@@ -207,17 +199,25 @@
             // 
             // tabControlStation
             // 
-            this.tabControlStation.Controls.Add(this.tabPageStation);
             resources.ApplyResources(this.tabControlStation, "tabControlStation");
+            this.tabControlStation.Controls.Add(this.tabPageStation);
             this.tabControlStation.Name = "tabControlStation";
             this.tabControlStation.SelectedIndex = 0;
             // 
             // tabPageStation
             // 
+            this.tabPageStation.Controls.Add(this.btnBaseCoordinate);
             this.tabPageStation.Controls.Add(this.dGVStation);
             resources.ApplyResources(this.tabPageStation, "tabPageStation");
             this.tabPageStation.Name = "tabPageStation";
             this.tabPageStation.UseVisualStyleBackColor = true;
+            // 
+            // btnBaseCoordinate
+            // 
+            resources.ApplyResources(this.btnBaseCoordinate, "btnBaseCoordinate");
+            this.btnBaseCoordinate.Name = "btnBaseCoordinate";
+            this.btnBaseCoordinate.UseVisualStyleBackColor = true;
+            this.btnBaseCoordinate.Click += new System.EventHandler(this.btnBaseCoordinate_Click);
             // 
             // dGVStation
             // 
@@ -251,6 +251,7 @@
             resources.ApplyResources(this.ColumnName, "ColumnName");
             this.ColumnName.Name = "ColumnName";
             this.ColumnName.ReadOnly = true;
+            this.ColumnName.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // ColumnValue
             // 
@@ -259,43 +260,11 @@
             resources.ApplyResources(this.ColumnValue, "ColumnValue");
             this.ColumnValue.Name = "ColumnValue";
             this.ColumnValue.ReadOnly = true;
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.btnBaseCoordinate);
-            this.groupBox4.Controls.Add(this.btnSettings);
-            resources.ApplyResources(this.groupBox4, "groupBox4");
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.TabStop = false;
-            // 
-            // btnBaseCoordinate
-            // 
-            resources.ApplyResources(this.btnBaseCoordinate, "btnBaseCoordinate");
-            this.btnBaseCoordinate.Name = "btnBaseCoordinate";
-            this.btnBaseCoordinate.UseVisualStyleBackColor = true;
-            // 
-            // btnSettings
-            // 
-            resources.ApplyResources(this.btnSettings, "btnSettings");
-            this.btnSettings.Name = "btnSettings";
-            this.btnSettings.UseVisualStyleBackColor = true;
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.pictureBox1);
-            resources.ApplyResources(this.groupBox3, "groupBox3");
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.TabStop = false;
+            this.ColumnValue.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // groupBox2
             // 
+            resources.ApplyResources(this.groupBox2, "groupBox2");
             this.groupBox2.Controls.Add(this.labRTKoutBdRate);
             this.groupBox2.Controls.Add(this.label15);
             this.groupBox2.Controls.Add(this.label14);
@@ -310,7 +279,6 @@
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label3);
-            resources.ApplyResources(this.groupBox2, "groupBox2");
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.TabStop = false;
             // 
@@ -384,6 +352,34 @@
             resources.ApplyResources(this.label3, "label3");
             this.label3.Name = "label3";
             // 
+            // groupBox4
+            // 
+            resources.ApplyResources(this.groupBox4, "groupBox4");
+            this.groupBox4.Controls.Add(this.btnSettings);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.TabStop = false;
+            // 
+            // btnSettings
+            // 
+            resources.ApplyResources(this.btnSettings, "btnSettings");
+            this.btnSettings.Name = "btnSettings";
+            this.btnSettings.UseVisualStyleBackColor = true;
+            this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
+            // 
+            // groupBox3
+            // 
+            resources.ApplyResources(this.groupBox3, "groupBox3");
+            this.groupBox3.Controls.Add(this.pcbCompass);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.TabStop = false;
+            // 
+            // pcbCompass
+            // 
+            resources.ApplyResources(this.pcbCompass, "pcbCompass");
+            this.pcbCompass.Name = "pcbCompass";
+            this.pcbCompass.TabStop = false;
+            this.pcbCompass.Paint += new System.Windows.Forms.PaintEventHandler(this.pcbCompass_Paint);
+            // 
             // FrmStart
             // 
             resources.ApplyResources(this, "$this");
@@ -402,11 +398,11 @@
             this.tabControlStation.ResumeLayout(false);
             this.tabPageStation.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dGVStation)).EndInit();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pcbCompass)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -424,9 +420,7 @@
         private System.Windows.Forms.TabControl tabControlStation;
         private System.Windows.Forms.TabPage tabPageStation;
         private System.Windows.Forms.DataGridView dGVStation;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnValue;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pcbCompass;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label11;
@@ -434,7 +428,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label labRTKoutBdRate;
         private System.Windows.Forms.Label label15;
@@ -454,5 +447,7 @@
         private System.Windows.Forms.Label labNetID;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Button btnBaseCoordinate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnValue;
     }
 }
