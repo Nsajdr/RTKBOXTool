@@ -17,6 +17,7 @@ namespace RTKBOXtool.View
         public int choose = 1;
         public SerialPort sp = new SerialPort();
         public byte[] Data = new byte[20000];
+        public int show = 0;
         public Model.INF_B562_0101 IN01 = new Model.INF_B562_0101();
         public Model.INF_B562_0111 IN11 = new Model.INF_B562_0111();
         public Model.INF_B562_0118 IN18 = new Model.INF_B562_0118();
@@ -121,6 +122,7 @@ namespace RTKBOXtool.View
                             labNetID.Text = Stf.NetID;
                             labchanel.Text = Stf.channels;
                             SetTable(IN19.Stationtype);
+                            labradiooutputrate.Text = Stf.RadioBaudrate;
                         }));
                     }
                     if (IN19.Stationtype == 0)
@@ -136,10 +138,20 @@ namespace RTKBOXtool.View
                             dGVStation.Rows[2].Cells[1].Value = (IN01.pacc * 0.01).ToString();
                             dGVStation.Rows[3].Cells[1].Value = P1[0];
                             dGVStation.Rows[4].Cells[1].Value = P1[1];
-                            dGVStation.Rows[5].Cells[1].Value = p[2].ToString("f3");
+                            dGVStation.Rows[5].Cells[1].Value = p[2].ToString("f3") + "m";                            
                             dGVStation.Rows[6].Cells[1].Value = Q[0];
                             dGVStation.Rows[7].Cells[1].Value = Q[1];
-                            dGVStation.Rows[8].Cells[1].Value = q[2].ToString("f3");
+                            dGVStation.Rows[8].Cells[1].Value = q[2].ToString("f3") + "m";
+                            Setformat();
+                            if (show == 1)
+                            {
+                                dGVStation.Rows[3].Cells[1].Value = IN01.ecefX * 0.01;
+                                dGVStation.Rows[4].Cells[1].Value = IN01.ecefY * 0.01;
+                                dGVStation.Rows[5].Cells[1].Value = IN01.ecefZ * 0.01;
+                                dGVStation.Rows[6].Cells[1].Value = IN11.SetX;
+                                dGVStation.Rows[7].Cells[1].Value = IN11.SetY;
+                                dGVStation.Rows[8].Cells[1].Value = IN11.SetZ;
+                            }
                         }));
                     }
                     else if(IN19.Stationtype == 1)
@@ -154,20 +166,73 @@ namespace RTKBOXtool.View
                             dGVStation.Rows[2].Cells[1].Value = B[0];
                             dGVStation.Rows[3].Cells[1].Value = A[0];
                             dGVStation.Rows[4].Cells[1].Value = A[1];
-                            dGVStation.Rows[5].Cells[1].Value = a[2].ToString("f3");
+                            dGVStation.Rows[5].Cells[1].Value = a[2].ToString("f3") + "m";
                             dGVStation.Rows[6].Cells[1].Value = b[0].ToString("f3");
                             dGVStation.Rows[7].Cells[1].Value = b[1].ToString("f3");
                             dGVStation.Rows[8].Cells[1].Value = b[2].ToString("f3");
                             dGVStation.Rows[9].Cells[1].Value = B[1];
+                            Setformat();
+                            if(show==1)
+                            {
+                                dGVStation.Rows[3].Cells[1].Value = IN18.Recefx;
+                                dGVStation.Rows[4].Cells[1].Value = IN18.RecefY;
+                                dGVStation.Rows[5].Cells[1].Value = IN18.Recefz;
+                            }
                         }));
                     }
                 }
             }
         }
-
+        public void Setformat()
+        {
+            if (show == 1)
+            {
+                if (IN19.Stationtype == 0)
+                {
+                    dGVStation.Rows[3].Cells[0].Value = "ECEF-X";
+                    dGVStation.Rows[4].Cells[0].Value = "ECEF-Y";
+                    dGVStation.Rows[5].Cells[0].Value = "ECEF-Z";
+                    dGVStation.Rows[6].Cells[0].Value = "用户设置ECEF-X";
+                    dGVStation.Rows[7].Cells[0].Value = "用户设置ECEF-Y";
+                    dGVStation.Rows[8].Cells[0].Value = "用户设置ECEF-Y";
+                }
+                else if (IN19.Stationtype == 1)
+                {
+                    dGVStation.Rows[3].Cells[0].Value = "ECEF-X";
+                    dGVStation.Rows[4].Cells[0].Value = "ECEF-Y";
+                    dGVStation.Rows[5].Cells[0].Value = "ECEF-Z";
+                }
+            }
+            else
+            {
+                if (IN19.Stationtype == 0)
+                {
+                    dGVStation.Rows[3].Cells[0].Value = "经度";
+                    dGVStation.Rows[4].Cells[0].Value = "纬度";
+                    dGVStation.Rows[5].Cells[0].Value = "高程";
+                    dGVStation.Rows[6].Cells[0].Value = "用户设置经度";
+                    dGVStation.Rows[7].Cells[0].Value = "用户设置纬度";
+                    dGVStation.Rows[8].Cells[0].Value = "用户设置高程";
+                }
+                else if (IN19.Stationtype == 1)
+                {
+                    dGVStation.Rows[3].Cells[0].Value = "经度";
+                    dGVStation.Rows[4].Cells[0].Value = "纬度";
+                    dGVStation.Rows[5].Cells[0].Value = "高程";
+                }
+            }
+        }
         private void btnBaseCoordinate_Click(object sender, EventArgs e)
         {
-            sp.Close();
+            FrmSetCoordinate frm = new FrmSetCoordinate(this);
+            frm.show = show;
+            if(frm.ShowDialog()==DialogResult.OK)
+            {
+                dGVStation.Rows[6].Cells[1].Value = frm.X;
+                dGVStation.Rows[7].Cells[1].Value = frm.Y;
+                dGVStation.Rows[8].Cells[1].Value = frm.Z;
+                sp.WriteLine(frm.str);
+            }
         }
 
         private void pcbCompass_Paint(object sender, PaintEventArgs e)
@@ -188,7 +253,7 @@ namespace RTKBOXtool.View
         private void btnSettings_Click(object sender, EventArgs e)
         {
             if (sp == null) { return; }
-            FrmOptions frm = new FrmOptions();
+            FrmOptions frm = new FrmOptions(this);
             frm.Inf = Stf;
             frm.In19 = IN19;
             frm.sp = sp;

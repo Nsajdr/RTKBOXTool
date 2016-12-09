@@ -28,8 +28,10 @@ namespace RTKBOXtool.View
         public string[] RadioBaudrate = { "9600", "19200", "38400", "57600", "115200" };
         public Model.SetInf Inf;
         public Model.INF_B562_0119 In19;
-        public FrmOptions()
+        FrmStart frm = new FrmStart();
+        public FrmOptions(FrmStart a)
         {
+            frm = a;
             InitializeComponent();
         }
         private void FrmOptions_Load(object sender, EventArgs e)
@@ -63,7 +65,7 @@ namespace RTKBOXtool.View
             //
             #region 读取配置
             cbxStationtype.Text = Inf.Stationtype;
-            cbxCoorFormat.Text = Inf.coordirateFormat;
+            cbxCoorFormat.Text = Coorformat[frm.show];
             cbxOutputtype.Text = Inf.Outputtype;
             groupBox1.Text = Inf.Outputtype;
             cbxRTKrate.Text = Inf.Rtkrate;
@@ -84,14 +86,15 @@ namespace RTKBOXtool.View
         {
             if (cbxEnableflag.Text == Enableflag[0])
             {
-                groupBox2.Visible = false;
+                groupBox2.Enabled = false;
                 cbxRadioBaudrate.Enabled = true;
             }
             else
             {
-                groupBox2.Visible = true;
+                groupBox2.Enabled = true;
                 cbxRadioBaudrate.Enabled = false;
             }
+            
         }
         public void Outchoose(string m,Model.INF_B562_0119 IN19)
         {
@@ -144,7 +147,8 @@ namespace RTKBOXtool.View
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            if (string.IsNullOrWhiteSpace(Inf.coordirateFormat)) { return; }
+            frm.show = Array.IndexOf(Coorformat, cbxCoorFormat.Text);
             int uiStationtype = Array.IndexOf(Stationtype, cbxStationtype.Text);
             int uiOutputtype = Array.IndexOf(Outputtype, cbxOutputtype.Text);
             int uiRtkRate = Array.IndexOf(RTKrate, cbxRTKrate.Text);
@@ -208,12 +212,12 @@ namespace RTKBOXtool.View
         {
             if (cbxEnableflag.Text == Enableflag[0])
             {
-                groupBox2.Visible = false;
+                groupBox2.Enabled = false;
                 cbxRadioBaudrate.Enabled = true;
             }
             else
             {
-                groupBox2.Visible = true;
+                groupBox2.Enabled = true;
                 cbxRadioBaudrate.Enabled = false;
             }
         }

@@ -71,6 +71,8 @@
             this.btnSettings = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.pcbCompass = new System.Windows.Forms.PictureBox();
+            this.lab6 = new System.Windows.Forms.Label();
+            this.labradiooutputrate = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -106,6 +108,8 @@
             // groupBox5
             // 
             resources.ApplyResources(this.groupBox5, "groupBox5");
+            this.groupBox5.Controls.Add(this.labradiooutputrate);
+            this.groupBox5.Controls.Add(this.lab6);
             this.groupBox5.Controls.Add(this.labNetID);
             this.groupBox5.Controls.Add(this.label21);
             this.groupBox5.Controls.Add(this.labchanel);
@@ -380,6 +384,16 @@
             this.pcbCompass.TabStop = false;
             this.pcbCompass.Paint += new System.Windows.Forms.PaintEventHandler(this.pcbCompass_Paint);
             // 
+            // lab6
+            // 
+            resources.ApplyResources(this.lab6, "lab6");
+            this.lab6.Name = "lab6";
+            // 
+            // labradiooutputrate
+            // 
+            resources.ApplyResources(this.labradiooutputrate, "labradiooutputrate");
+            this.labradiooutputrate.Name = "labradiooutputrate";
+            // 
             // FrmStart
             // 
             resources.ApplyResources(this, "$this");
@@ -419,7 +433,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TabControl tabControlStation;
         private System.Windows.Forms.TabPage tabPageStation;
-        private System.Windows.Forms.DataGridView dGVStation;
         private System.Windows.Forms.PictureBox pcbCompass;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label13;
@@ -449,5 +462,8 @@
         private System.Windows.Forms.Button btnBaseCoordinate;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnName;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnValue;
+        private System.Windows.Forms.Label labradiooutputrate;
+        private System.Windows.Forms.Label lab6;
+        public System.Windows.Forms.DataGridView dGVStation;
     }
 }

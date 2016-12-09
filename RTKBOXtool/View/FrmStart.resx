@@ -129,6 +129,69 @@
     <value>Bottom, Left, Right</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="labradiooutputrate.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labradiooutputrate.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微软雅黑, 12pt</value>
+  </data>
+  <data name="labradiooutputrate.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labradiooutputrate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>198, 122</value>
+  </data>
+  <data name="labradiooutputrate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>19, 21</value>
+  </data>
+  <data name="labradiooutputrate.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="labradiooutputrate.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;labradiooutputrate.Name" xml:space="preserve">
+    <value>labradiooutputrate</value>
+  </data>
+  <data name="&gt;&gt;labradiooutputrate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labradiooutputrate.Parent" xml:space="preserve">
+    <value>groupBox5</value>
+  </data>
+  <data name="&gt;&gt;labradiooutputrate.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lab6.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lab6.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微软雅黑, 12pt</value>
+  </data>
+  <data name="lab6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 122</value>
+  </data>
+  <data name="lab6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>138, 21</value>
+  </data>
+  <data name="lab6.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="lab6.Text" xml:space="preserve">
+    <value>外置数传波特率：</value>
+  </data>
+  <data name="&gt;&gt;lab6.Name" xml:space="preserve">
+    <value>lab6</value>
+  </data>
+  <data name="&gt;&gt;lab6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lab6.Parent" xml:space="preserve">
+    <value>groupBox5</value>
+  </data>
+  <data name="&gt;&gt;lab6.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="labNetID.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -139,7 +202,7 @@
     <value>NoControl</value>
   </data>
   <data name="labNetID.Location" type="System.Drawing.Point, System.Drawing">
-    <value>198, 77</value>
+    <value>198, 63</value>
   </data>
   <data name="labNetID.Size" type="System.Drawing.Size, System.Drawing">
     <value>95, 21</value>
@@ -160,7 +223,7 @@
     <value>groupBox5</value>
   </data>
   <data name="&gt;&gt;labNetID.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="label21.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -172,7 +235,7 @@
     <value>NoControl</value>
   </data>
   <data name="label21.Location" type="System.Drawing.Point, System.Drawing">
-    <value>93, 113</value>
+    <value>92, 88</value>
   </data>
   <data name="label21.Size" type="System.Drawing.Size, System.Drawing">
     <value>58, 21</value>
@@ -193,7 +256,7 @@
     <value>groupBox5</value>
   </data>
   <data name="&gt;&gt;label21.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="labchanel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -205,7 +268,7 @@
     <value>NoControl</value>
   </data>
   <data name="labchanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>198, 113</value>
+    <value>198, 88</value>
   </data>
   <data name="labchanel.Size" type="System.Drawing.Size, System.Drawing">
     <value>49, 21</value>
@@ -226,7 +289,7 @@
     <value>groupBox5</value>
   </data>
   <data name="&gt;&gt;labchanel.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="label19.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -238,7 +301,7 @@
     <value>NoControl</value>
   </data>
   <data name="label19.Location" type="System.Drawing.Point, System.Drawing">
-    <value>80, 77</value>
+    <value>79, 63</value>
   </data>
   <data name="label19.Size" type="System.Drawing.Size, System.Drawing">
     <value>71, 21</value>
@@ -259,7 +322,7 @@
     <value>groupBox5</value>
   </data>
   <data name="&gt;&gt;label19.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
   <data name="labTFmode.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -271,7 +334,7 @@
     <value>NoControl</value>
   </data>
   <data name="labTFmode.Location" type="System.Drawing.Point, System.Drawing">
-    <value>198, 45</value>
+    <value>198, 37</value>
   </data>
   <data name="labTFmode.Size" type="System.Drawing.Size, System.Drawing">
     <value>81, 21</value>
@@ -292,7 +355,7 @@
     <value>groupBox5</value>
   </data>
   <data name="&gt;&gt;labTFmode.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
   <data name="label17.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -301,7 +364,7 @@
     <value>微软雅黑, 12pt</value>
   </data>
   <data name="label17.Location" type="System.Drawing.Point, System.Drawing">
-    <value>61, 45</value>
+    <value>61, 37</value>
   </data>
   <data name="label17.Size" type="System.Drawing.Size, System.Drawing">
     <value>90, 21</value>
@@ -322,7 +385,7 @@
     <value>groupBox5</value>
   </data>
   <data name="&gt;&gt;label17.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>7</value>
   </data>
   <data name="groupBox5.Font" type="System.Drawing.Font, System.Drawing">
     <value>幼圆, 12pt, style=Bold</value>
@@ -697,7 +760,7 @@
     <value>NoControl</value>
   </data>
   <data name="labRTKoutBdRate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>338, 97</value>
+    <value>314, 97</value>
   </data>
   <data name="labRTKoutBdRate.Size" type="System.Drawing.Size, System.Drawing">
     <value>90, 21</value>
@@ -733,7 +796,7 @@
     <value>NoControl</value>
   </data>
   <data name="label15.Location" type="System.Drawing.Point, System.Drawing">
-    <value>214, 97</value>
+    <value>182, 97</value>
   </data>
   <data name="label15.Size" type="System.Drawing.Size, System.Drawing">
     <value>135, 21</value>
@@ -802,7 +865,7 @@
     <value>NoControl</value>
   </data>
   <data name="labRTKmode.Location" type="System.Drawing.Point, System.Drawing">
-    <value>102, 97</value>
+    <value>87, 97</value>
   </data>
   <data name="labRTKmode.Size" type="System.Drawing.Size, System.Drawing">
     <value>90, 21</value>
@@ -838,7 +901,7 @@
     <value>NoControl</value>
   </data>
   <data name="labGNSSmode.Location" type="System.Drawing.Point, System.Drawing">
-    <value>338, 63</value>
+    <value>314, 60</value>
   </data>
   <data name="labGNSSmode.Size" type="System.Drawing.Size, System.Drawing">
     <value>90, 21</value>
@@ -874,7 +937,7 @@
     <value>NoControl</value>
   </data>
   <data name="labPosFormat.Location" type="System.Drawing.Point, System.Drawing">
-    <value>102, 60</value>
+    <value>87, 60</value>
   </data>
   <data name="labPosFormat.Size" type="System.Drawing.Size, System.Drawing">
     <value>90, 21</value>
@@ -907,7 +970,7 @@
     <value>微软雅黑, 12pt</value>
   </data>
   <data name="labWoringband.Location" type="System.Drawing.Point, System.Drawing">
-    <value>338, 24</value>
+    <value>314, 23</value>
   </data>
   <data name="labWoringband.Size" type="System.Drawing.Size, System.Drawing">
     <value>90, 21</value>
@@ -937,7 +1000,7 @@
     <value>微软雅黑, 12pt</value>
   </data>
   <data name="labProtocol.Location" type="System.Drawing.Point, System.Drawing">
-    <value>102, 24</value>
+    <value>87, 24</value>
   </data>
   <data name="labProtocol.Size" type="System.Drawing.Size, System.Drawing">
     <value>90, 21</value>
@@ -1033,7 +1096,7 @@
     <value>微软雅黑, 12pt</value>
   </data>
   <data name="label9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>248, 63</value>
+    <value>216, 60</value>
   </data>
   <data name="label9.Size" type="System.Drawing.Size, System.Drawing">
     <value>101, 21</value>
@@ -1066,7 +1129,7 @@
     <value>微软雅黑, 12pt</value>
   </data>
   <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>248, 24</value>
+    <value>227, 24</value>
   </data>
   <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
     <value>90, 21</value>
