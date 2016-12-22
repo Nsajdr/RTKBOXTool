@@ -16,7 +16,7 @@ namespace RTKBOXtool
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new View.FrmStart());
+            Application.Run(new View.FrmRTK());
         }
     }
 }

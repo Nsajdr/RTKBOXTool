@@ -63,6 +63,24 @@ namespace RTKBOXtool.Controller
             matmul(cr, 3, 1, 3, 1.0, E, r, 0.0, e);
             return e;
         }
+        /// <summary>
+        /// 获取流动站相对于基准站方位
+        /// </summary>
+        /// <param name="ReCEF">流动站ECEF</param>
+        /// <param name="SeCEF">基准站ECEF</param>
+        /// <param name="Renu">结果站心坐标</param>
+        public static void EnuFormEcef(double[] ReCEF,double[] SeCEF,double[] Renu)
+        {
+            int i = 0;
+            double[] vEcef = new double[3];
+            double[] bPos = new double[3];
+            for(i=0;i<3;i++)
+            {
+                vEcef[i] = ReCEF[i] - SeCEF[i];
+            }
+            ecef2pos(SeCEF, bPos);
+            ecef2enu(bPos, vEcef, Renu);
+        }
         public static void enu2ecef(double[] pos, double[] e, double[] r)
         {
             double[] E = new double[9];

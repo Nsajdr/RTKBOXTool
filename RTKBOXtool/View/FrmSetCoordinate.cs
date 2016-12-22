@@ -18,8 +18,8 @@ namespace RTKBOXtool.View
         public double j, k, l;
         public int show;
         public string str;
-        FrmStart frm = new FrmStart();
-        public FrmSetCoordinate(FrmStart a)
+        FrmRTK frm = new FrmRTK();
+        public FrmSetCoordinate(FrmRTK a)
         {
             InitializeComponent();
             frm = a;
@@ -37,9 +37,9 @@ namespace RTKBOXtool.View
 
         private void btnGet_Click(object sender, EventArgs e)
         {
-            labX.Text = frm.dGVStation.Rows[3].Cells[1].Value.ToString();
-            labY.Text = frm.dGVStation.Rows[4].Cells[1].Value.ToString();
-            labZ.Text = frm.dGVStation.Rows[5].Cells[1].Value.ToString();
+            labX.Text = frm.lablen.Text;
+            labY.Text = frm.lablon.Text;
+            labZ.Text = frm.labhigh.Text;
         }
 
         private void btnSend_Click(object sender, EventArgs e)

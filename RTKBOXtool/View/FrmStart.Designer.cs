@@ -33,6 +33,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.labradiooutputrate = new System.Windows.Forms.Label();
+            this.lab6 = new System.Windows.Forms.Label();
             this.labNetID = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.labchanel = new System.Windows.Forms.Label();
@@ -71,8 +73,6 @@
             this.btnSettings = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.pcbCompass = new System.Windows.Forms.PictureBox();
-            this.lab6 = new System.Windows.Forms.Label();
-            this.labradiooutputrate = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -119,6 +119,16 @@
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.TabStop = false;
             // 
+            // labradiooutputrate
+            // 
+            resources.ApplyResources(this.labradiooutputrate, "labradiooutputrate");
+            this.labradiooutputrate.Name = "labradiooutputrate";
+            // 
+            // lab6
+            // 
+            resources.ApplyResources(this.lab6, "lab6");
+            this.lab6.Name = "lab6";
+            // 
             // labNetID
             // 
             resources.ApplyResources(this.labNetID, "labNetID");
@@ -152,6 +162,7 @@
             // groupBox1
             // 
             resources.ApplyResources(this.groupBox1, "groupBox1");
+            this.groupBox1.BackColor = System.Drawing.SystemColors.Control;
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.comboBoxPort);
             this.groupBox1.Controls.Add(this.btnOpenPort);
@@ -384,22 +395,13 @@
             this.pcbCompass.TabStop = false;
             this.pcbCompass.Paint += new System.Windows.Forms.PaintEventHandler(this.pcbCompass_Paint);
             // 
-            // lab6
-            // 
-            resources.ApplyResources(this.lab6, "lab6");
-            this.lab6.Name = "lab6";
-            // 
-            // labradiooutputrate
-            // 
-            resources.ApplyResources(this.labradiooutputrate, "labradiooutputrate");
-            this.labradiooutputrate.Name = "labradiooutputrate";
-            // 
             // FrmStart
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.splitContainer1);
             this.Name = "FrmStart";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmStart_FormClosed);
             this.Load += new System.EventHandler(this.FrmStart_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);

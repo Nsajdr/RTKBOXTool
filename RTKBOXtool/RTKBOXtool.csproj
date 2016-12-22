@@ -8,10 +8,25 @@
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>RTKBOXtool</RootNamespace>
-    <AssemblyName>RTKBOXtool</AssemblyName>
+    <AssemblyName>RTKBOX配置平台 V3.1</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -32,9 +47,13 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>configuration_128px_1204356_easyicon.net.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Messaging" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -56,11 +75,53 @@
     <Compile Include="Model\SetInf.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\FrmAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmAbout.Designer.cs">
+      <DependentUpon>FrmAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmCOM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmCOM.Designer.cs">
+      <DependentUpon>FrmCOM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmInRF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmInRF.Designer.cs">
+      <DependentUpon>FrmInRF.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\FrmOptions.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\FrmOptions.Designer.cs">
       <DependentUpon>FrmOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmOutRF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmOutRF.Designer.cs">
+      <DependentUpon>FrmOutRF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmPlot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmPlot.Designer.cs">
+      <DependentUpon>FrmPlot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmRTK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmRTK.Designer.cs">
+      <DependentUpon>FrmRTK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmSet.Designer.cs">
+      <DependentUpon>FrmSet.cs</DependentUpon>
     </Compile>
     <Compile Include="View\FrmSetCoordinate.cs">
       <SubType>Form</SubType>
@@ -83,8 +144,29 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\FrmAbout.resx">
+      <DependentUpon>FrmAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmCOM.resx">
+      <DependentUpon>FrmCOM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmInRF.resx">
+      <DependentUpon>FrmInRF.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\FrmOptions.resx">
       <DependentUpon>FrmOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmOutRF.resx">
+      <DependentUpon>FrmOutRF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmPlot.resx">
+      <DependentUpon>FrmPlot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmRTK.resx">
+      <DependentUpon>FrmRTK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmSet.resx">
+      <DependentUpon>FrmSet.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FrmSetCoordinate.resx">
       <DependentUpon>FrmSetCoordinate.cs</DependentUpon>
@@ -95,6 +177,7 @@
     <EmbeddedResource Include="View\FrmStart.resx">
       <DependentUpon>FrmStart.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -108,7 +191,21 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="configuration_128px_1204356_easyicon.net.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

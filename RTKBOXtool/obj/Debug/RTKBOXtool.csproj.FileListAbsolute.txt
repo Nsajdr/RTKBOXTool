@@ -1,14 +1,21 @@
-E:\Work\Mission\Project\RTKBOXtool\RTKBOXtool\bin\Debug\RTKBOXtool.exe.config
-E:\Work\Mission\Project\RTKBOXtool\RTKBOXtool\bin\Debug\RTKBOXtool.exe
-E:\Work\Mission\Project\RTKBOXtool\RTKBOXtool\bin\Debug\RTKBOXtool.pdb
 E:\Work\Mission\Project\RTKBOXtool\RTKBOXtool\obj\Debug\RTKBOXtool.Properties.Resources.resources
 E:\Work\Mission\Project\RTKBOXtool\RTKBOXtool\obj\Debug\RTKBOXtool.csproj.GenerateResource.Cache
-E:\Work\Mission\Project\RTKBOXtool\RTKBOXtool\obj\Debug\RTKBOXtool.exe
-E:\Work\Mission\Project\RTKBOXtool\RTKBOXtool\obj\Debug\RTKBOXtool.pdb
-E:\Work\Mission\Project\RTKBOXtool\RTKBOXtool\bin\Debug\en\RTKBOXtool.resources.dll
-E:\Work\Mission\Project\RTKBOXtool\RTKBOXtool\obj\Debug\en\RTKBOXtool.resources.dll
 E:\Work\Mission\Project\RTKBOXtool\RTKBOXtool\obj\Debug\RTKBOXtool.View.FrmOptions.resources
 E:\Work\Mission\Project\RTKBOXtool\RTKBOXtool\obj\Debug\RTKBOXtool.View.FrmStart.resources
 E:\Work\Mission\Project\RTKBOXtool\RTKBOXtool\obj\Debug\RTKBOXtool.View.FrmStart.en.resources
 E:\Work\Mission\Project\RTKBOXtool\RTKBOXtool\obj\Debug\RTKBOXtool.csprojResolveAssemblyReference.cache
 E:\Work\Mission\Project\RTKBOXtool\RTKBOXtool\obj\Debug\RTKBOXtool.View.FrmSetCoordinate.resources
+E:\Work\Mission\Project\RTKBOXtool\RTKBOXtool\obj\Debug\RTKBOXtool.View.FrmRTK.resources
+E:\Work\Mission\Project\RTKBOXtool\RTKBOXtool\obj\Debug\RTKBOXtool.View.FrmCOM.resources
+E:\Work\Mission\Project\RTKBOXtool\RTKBOXtool\obj\Debug\RTKBOXtool.View.FrmSet.resources
+E:\Work\Mission\Project\RTKBOXtool\RTKBOXtool\obj\Debug\RTKBOXtool.View.FrmInRF.resources
+E:\Work\Mission\Project\RTKBOXtool\RTKBOXtool\obj\Debug\RTKBOXtool.View.FrmOutRF.resources
+E:\Work\Mission\Project\RTKBOXtool\RTKBOXtool\obj\Debug\RTKBOXtool.View.FrmPlot.resources
+E:\Work\Mission\Project\RTKBOXtool\RTKBOXtool\obj\Debug\RTKBOXtool.View.FrmAbout.resources
+E:\Work\Mission\Project\RTKBOXtool\RTKBOXtool\bin\Debug\RTKbOX配置平台 V3.1.exe.config
+E:\Work\Mission\Project\RTKBOXtool\RTKBOXtool\bin\Debug\RTKbOX配置平台 V3.1.exe
+E:\Work\Mission\Project\RTKBOXtool\RTKBOXtool\bin\Debug\RTKbOX配置平台 V3.1.pdb
+E:\Work\Mission\Project\RTKBOXtool\RTKBOXtool\bin\Debug\en\RTKbOX配置平台 V3.1.resources.dll
+E:\Work\Mission\Project\RTKBOXtool\RTKBOXtool\obj\Debug\en\RTKbOX配置平台 V3.1.resources.dll
+E:\Work\Mission\Project\RTKBOXtool\RTKBOXtool\obj\Debug\RTKbOX配置平台 V3.1.exe
+E:\Work\Mission\Project\RTKBOXtool\RTKBOXtool\obj\Debug\RTKbOX配置平台 V3.1.pdb

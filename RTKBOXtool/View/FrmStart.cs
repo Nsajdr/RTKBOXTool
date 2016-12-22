@@ -24,7 +24,6 @@ namespace RTKBOXtool.View
         public Model.INF_B562_0119 IN19 = new Model.INF_B562_0119();
         public Model.SetInf Stf = new Model.SetInf();
         public Graphics g;
-        Pen pen;
         public FrmStart()
         {
             InitializeComponent();
@@ -72,6 +71,7 @@ namespace RTKBOXtool.View
                 dGVStation.Rows[6].Cells[0].Value = "用户设置经度";
                 dGVStation.Rows[7].Cells[0].Value = "用户设置纬度";
                 dGVStation.Rows[8].Cells[0].Value = "用户设置高程";
+                btnBaseCoordinate.Visible = true;
             }
             else
             {
@@ -84,16 +84,13 @@ namespace RTKBOXtool.View
                 dGVStation.Rows[7].Cells[0].Value = "向北速度";
                 dGVStation.Rows[8].Cells[0].Value = "对地速度";
                 dGVStation.Rows[9].Cells[0].Value = "使用卫星数";
+                btnBaseCoordinate.Visible = false;
             }
             dGVStation.CurrentCell = dGVStation.Rows[2].Cells[0];
         }
         private void FrmStart_Load(object sender, EventArgs e)
         {
             btnBaseCoordinate.Visible = false;
-            g = pcbCompass.CreateGraphics();
-            pen = new Pen(Color.Red,6);
-            //g.DrawLine(pen, 0, 0, pcbCompass.Width, pcbCompass.Height);
-            //g.Dispose();
         }
         public void Interpret(object sender, SerialDataReceivedEventArgs e)
         {           
@@ -224,30 +221,23 @@ namespace RTKBOXtool.View
         }
         private void btnBaseCoordinate_Click(object sender, EventArgs e)
         {
-            FrmSetCoordinate frm = new FrmSetCoordinate(this);
-            frm.show = show;
-            if(frm.ShowDialog()==DialogResult.OK)
-            {
-                dGVStation.Rows[6].Cells[1].Value = frm.X;
-                dGVStation.Rows[7].Cells[1].Value = frm.Y;
-                dGVStation.Rows[8].Cells[1].Value = frm.Z;
-                sp.WriteLine(frm.str);
-            }
+            //FrmSetCoordinate frm = new FrmSetCoordinate(this);
+            //frm.show = show;
+            //if(frm.ShowDialog()==DialogResult.OK)
+            //{
+            //    dGVStation.Rows[6].Cells[1].Value = frm.X;
+            //    dGVStation.Rows[7].Cells[1].Value = frm.Y;
+            //    dGVStation.Rows[8].Cells[1].Value = frm.Z;
+            //    sp.WriteLine(frm.str);
+            //}
         }
 
         private void pcbCompass_Paint(object sender, PaintEventArgs e)
         {
-            //g = e.Graphics;
-            //g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
-            //pen.StartCap = System.Drawing.Drawing2D.LineCap.Round;
-            //pen.DashStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            //pen.EndCap = System.Drawing.Drawing2D.LineCap.ArrowAnchor;
-            //g.DrawLine(pen, pcbCompass.Width / 2, pcbCompass.Height - 80, pcbCompass.Width / 2, 80);
-            //Rectangle rect = new Rectangle(pcbCompass.Width / 2 - 5, pcbCompass.Height / 2 - 5, 10, 10);
-            //Pen p = new Pen(Color.Red);
-            //g.DrawEllipse(p, rect);
-            //Brush b = new SolidBrush(Color.Red);
-            //g.FillEllipse(b,rect);
+            int a = pcbCompass.Width >= pcbCompass.Height ? pcbCompass.Height : pcbCompass.Width;
+            Pen p = new Pen(Color.Black);
+            g = e.Graphics;
+            g.DrawEllipse(p, pcbCompass.Width / 2 - a / 2 + 2, pcbCompass.Height / 2 - a / 2 + 2, a - 4, a - 4);
         }
 
         private void btnSettings_Click(object sender, EventArgs e)
@@ -258,6 +248,18 @@ namespace RTKBOXtool.View
             frm.In19 = IN19;
             frm.sp = sp;
             frm.ShowDialog();
+        }
+
+        private void FrmStart_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if(sp!=null)
+            {
+                if(sp.IsOpen)
+                {
+                    sp.Close();
+                    sp.Dispose();
+                }
+            }
         }
     }
 }
